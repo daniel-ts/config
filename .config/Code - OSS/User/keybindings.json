@@ -1,0 +1,313 @@
+[
+    //////////////////////////////
+    ////    Cursor bewegen    ////
+    //////////////////////////////
+    {
+        "key": "ctrl+e",
+        "command": "cursorEnd"
+        //"when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "cursorHome"
+        //"when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "cursorLeft",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "cursorRight",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "cursorDown",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "cursorUp",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+[BracketLeft]",
+        "command": "cursorTop",
+        "when": "editorTextFocus"
+    },
+    ///////////////////////////////
+    ////    file operations    ////
+    ///////////////////////////////
+    {
+        "key": "ctrl+x ctrl+s",
+        "command": "workbench.action.files.save",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+s",
+        "command": "-workbench.action.files.save"
+    },
+    
+    {
+        "key": "ctrl+s",
+        "command": "editor.action.startFindReplaceAction",
+        "when": "editorTextFocus"
+    },
+    ////////////////////
+    ////    meta    ////
+    ////////////////////
+    {
+        "key": "alt+x",
+        "command": "workbench.action.showCommands"
+    },
+    ////////////////////////////////
+    ////    editors+windows:    ////
+    ////////////////////////////////
+    {
+        "key": "ctrl+x b",
+        "command": "workbench.action.showAllEditors"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeWindow",
+        "when": "!editorIsOpen && !multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeGroup",
+        "when": "activeEditorGroupEmpty && multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+x ctrl+f",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpenNavigateNext",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpenNavigatePrevious",
+        "when": "!editorTextFocus"
+    },
+    { // is extension: ext install kaiwood.center-editor-window
+        "key": "ctrl+l",
+        "command": "center-editor-window.center",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+x m",
+        "command": "workbench.action.quickSwitchWindow",
+        "when": ""
+    },
+    {
+        "key": "ctrl+x o",
+        "command": "workbench.action.focusNextGroup"
+    },
+    {
+        "key": "ctrl+x k",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeActiveEditor"
+    },
+    /*
+        es gibt auch:
+            workbench.action.focusAboveGroup
+            workbench.action.focusBelowGroup
+            workbench.action.focusLeftGroup
+            workbench.action.focusRightGroup
+    */
+    {
+        "key": "ctrl+x 1",
+        "command": "workbench.action.closeEditorsInGroup",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+x 2",
+        "command": "workbench.action.splitEditorDown",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+x 3",
+        "command": "workbench.action.splitEditorRight",
+        "when": "editorTextFocus"
+    },
+    /////////////////////////////////
+    ////    text modification    ////
+    /////////////////////////////////
+    {
+        "key": "ctrl+k",
+        "command": "deleteAllRight",
+        "when": "editorTextFocus && !editorReadOnly"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "editor.action.clipboardCutAction",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+x",
+        "command": "-editor.action.clipboardCutAction",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "deleteRight",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "workbench.action.terminal.deleteWordRight",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    ////////////////////////
+    ////    terminal    ////
+    ////////////////////////
+    {
+        "key": "meta+x 3",
+        "command": "workbench.action.terminal.split",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "meta+x k",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+o",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+s",
+        "command": "workbench.action.terminal.focusFindWidget",
+        "when": "terminalFocus"
+    },
+    
+    ///////////////////////////
+    ////    select text    ////
+    ///////////////////////////
+
+    {
+        "key": "ctrl+h",
+        "command": "editor.action.selectToBracket",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "editor.action.smartSelect.grow",
+        "when": "editorTextFocus"
+    },
+
+    //////////////////////
+    ////    cursor    ////
+    //////////////////////
+    {
+        "key": "ctrl+shift+up",
+        "command": "-editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "meta+up",
+        "command": "editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+up",
+        "command": "-editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "-editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "meta+down",
+        "command": "editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+down",
+        "command": "-editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+
+    /////////////////////////////////////
+    ////    navigate suggestions    /////
+    /////////////////////////////////////
+    {
+        "key": "ctrl+p",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    ////////////////////////////////////////
+    ////    deleted because conflict    ////
+    ////////////////////////////////////////
+    {
+        "key": "ctrl+d",
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "-workbench.view.debug"
+    },
+    {
+        "key": "shift+alt+i",
+        "command": "-editor.action.insertCursorAtEndOfEachLineSelected",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-workbench.action.terminal.focusFindWidget",
+        "when": "terminalFindWidgetFocused"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-workbench.action.terminal.focusFindWidget",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "-editor.action.startFindReplaceAction"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+[Comma]",
+        "command": "-workbench.action.openSettings"
+    },
+
+    {
+        "key": "shift+alt+right",
+        "command": "-editor.action.smartSelect.grow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+y",
+        "command": "-redo",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    //////////////////////////
+    ////    TEST / TMP    ////
+    //////////////////////////
+    
+]

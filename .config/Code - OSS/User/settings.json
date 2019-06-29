@@ -1,0 +1,20 @@
+{
+    "latex-workshop.view.pdf.viewer": "tab",
+    "files.associations": {
+        "*.tex": "latex"
+    },
+    "[latex]": {
+        "editor.wordWrap": "on",
+    },
+    "window.zoomLevel": 0,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "breadcrumbs.enabled": false,
+    "editor.minimap.enabled": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "zenMode.hideTabs": false,
+    "terminal.integrated.cursorStyle": "line",
+    "bashIde.path": "/usr/lib/node_modules/bash-language-server/bin/main.js"
+}
