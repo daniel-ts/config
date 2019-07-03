@@ -121,7 +121,12 @@ fi
 ####    OWN    ####
 ###################
 
-
 TERMINAL=gnome-terminal
 CATALINA_HOME=/opt/tomcat/apache-tomcat-8.5.39
 CATALINA_BASE=$CATALINA_HOME
+
+#######################
+####    ALIASES    ####
+#######################
+
+alias cfgadm="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
