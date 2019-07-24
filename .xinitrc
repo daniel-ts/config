@@ -36,5 +36,5 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-feh --bg-center /home/dandy/Pictures/Wallpapers/neon/neon-sunset.jpg
+feh --bg-center /home/dandy/pics/Wallpapers/neon/neon-sunset.jpg
 exec i3

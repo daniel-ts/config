@@ -121,12 +121,22 @@ fi
 ####    OWN    ####
 ###################
 
-TERMINAL=gnome-terminal
+export PATH=$PATH:$HOME/.cask/bin
+
+#TERMINAL=gnome-terminal
 CATALINA_HOME=/opt/tomcat/apache-tomcat-8.5.39
 CATALINA_BASE=$CATALINA_HOME
+
+export ALTERNATE_EDITOR=""
+export EDITOR="emacsclient -t"
+export VISUAL="emacsclient -c -a emacs"
+
+export XDG_DATA_DIRS=/home/dandy/.local
 
 #######################
 ####    ALIASES    ####
 #######################
 
 alias cfgadm="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+alias temacs="emacsclient -t"
+alias megatrans="/usr/bin/mega-transfers --show-syncs --limit=1000"
