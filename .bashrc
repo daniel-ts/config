@@ -121,7 +121,7 @@ fi
 ####    OWN    ####
 ###################
 
-export PATH=$PATH:$HOME/.cask/bin
+export PATH=$PATH:$HOME/.cask/bin:$HOME/bin
 
 #TERMINAL=gnome-terminal
 CATALINA_HOME=/opt/tomcat/apache-tomcat-8.5.39
@@ -131,7 +131,7 @@ export ALTERNATE_EDITOR=""
 export EDITOR="emacsclient -t"
 export VISUAL="emacsclient -c -a emacs"
 
-export XDG_DATA_DIRS=/home/dandy/.local
+#export XDG_DATA_DIRS=/home/dandy/.local
 
 #######################
 ####    ALIASES    ####
