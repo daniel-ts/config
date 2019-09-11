@@ -6,7 +6,7 @@
     "[latex]": {
         "editor.wordWrap": "on",
     },
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
     "breadcrumbs.enabled": false,
