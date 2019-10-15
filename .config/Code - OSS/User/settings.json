@@ -6,7 +6,7 @@
     "[latex]": {
         "editor.wordWrap": "on",
     },
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
     "breadcrumbs.enabled": false,
@@ -16,5 +16,6 @@
     "telemetry.enableCrashReporter": false,
     "zenMode.hideTabs": false,
     "terminal.integrated.cursorStyle": "line",
-    "bashIde.path": "/usr/lib/node_modules/bash-language-server/bin/main.js"
+    "bashIde.path": "/usr/lib/node_modules/bash-language-server/bin/main.js",
+    "python.jediEnabled": false
 }

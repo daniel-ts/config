@@ -123,10 +123,6 @@ fi
 
 export PATH=$PATH:$HOME/.cask/bin:$HOME/bin
 
-#TERMINAL=gnome-terminal
-CATALINA_HOME=/opt/tomcat/apache-tomcat-8.5.39
-CATALINA_BASE=$CATALINA_HOME
-
 export ALTERNATE_EDITOR=""
 export EDITOR="emacsclient -t"
 export VISUAL="emacsclient -c -a emacs"
