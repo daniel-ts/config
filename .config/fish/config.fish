@@ -1,4 +1,8 @@
 # set aliases
+function fish_title
+    true
+end
+
 alias sspnd="systemctl suspend"
 alias dwn="systemctl shutdown"
 alias temacs="emacsclient -t"
