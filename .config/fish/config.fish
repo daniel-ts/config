@@ -15,6 +15,7 @@ if status --is-login
    set -gx LANG en_US.utf8
    set -gx LC_ALL en_US.utf8
    set -gx LC_CTYPE en_US.utf8
+   set -gx TERM=xterm-256color
 
    set -gx PATH $PATH /home/dandy/bin /home/dandy/.cask/bin
    set -gx TERMINAL st
