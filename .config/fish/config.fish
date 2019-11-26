@@ -10,6 +10,7 @@ alias zathura="zathura --fork"
 alias cfgadm="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias megatrans="/usr/bin/mega-transfers --show-syncs --limit=1000 | less"
 alias dired='emacsclient -t -e "(dired  \"./\")"'
+alias magit="emacsclient -t -e (printf \"(magit-status-setup-buffer \"%s\")\" (git rev-parse))"
 #alias xdired='emacsclient -c -e "(dired  \"./\")"'
 
 # set environment
@@ -28,11 +29,11 @@ if status --is-login
    set -gx XDG_DATA_HOME /home/dandy/.local/share
    set -gx XDG_CACHE_HOME /home/dandy/.cache
 #set -gx XDG_DATA_DIRS /home/dandy/.local
-   set -gx XDG_DOCUMENTS_DIR="$HOME/docs"
-   set -gx XDG_DOWNLOAD_DIR="$HOME/downloads"
-   set -gx XDG_MUSIC_DIR="$HOME/music"
-   set -gx XDG_PICTURES_DIR="$HOME/pics"
-   set -gx XDG_VIDEOS_DIR="$HOME/vids"
+   set -gx XDG_DOCUMENTS_DIR "$HOME/docs"
+   set -gx XDG_DOWNLOAD_DIR "$HOME/downloads"
+   set -gx XDG_MUSIC_DIR "$HOME/music"
+   set -gx XDG_PICTURES_DIR "$HOME/pics"
+   set -gx XDG_VIDEOS_DIR "$HOME/vids"
 
 ### Java ###
     set -gx JAVA_HOME /usr/lib/jvm/default
