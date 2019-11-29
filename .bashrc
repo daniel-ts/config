@@ -115,3 +115,11 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+###################
+####    OWN    ####
+###################
+
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+fi
