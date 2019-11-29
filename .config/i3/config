@@ -87,6 +87,7 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+d focus child
 
 bindsym $mod+Shift+n exec --no-startup-id termite -e "/usr/local/bin/emacsclient -t"
+bindsym $mod+Shift+Return exec --no-startup-id "/usr/local/bin/emacsclient -c -e '(sane-term-create)'"
 bindsym $mod+n exec --no-startup-id "/usr/local/bin/emacsclient -c -a emacs"
 #bindsym $mod+o exec --no-startup-id '/usr/local/bin/emacsclient -c -e "(dired \"/home/dandy\")"'
 bindsym $mod+o exec --no-startup-id "/usr/local/bin/emacsclient -c /home/dandy/"
@@ -100,7 +101,7 @@ bindsym XF86AudioMute exec --no-startup-id "pamixer -t"
 bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10"
 bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10"
 #bindsym $ctrl+$alt+l exec --no-startup-id "/usr/bin/i3lock --ignore-empty-password --image=/home/dandy/.sysimg/lockscreen.png"
-bindsym Control+Alt+l exec --no-startup-id "/usr/bin/i3lock --ignore-empty-password --image=/home/dandy/.sysimg/lockscreen.png"
+#bindsym Control+Alt+l exec --no-startup-id "/usr/bin/i3lock --ignore-empty-password --image=/home/dandy/.sysimg/lockscreen.png"
 
 
 # Define names for default workspaces for which we configure key bindings later on.
