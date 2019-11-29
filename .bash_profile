@@ -20,10 +20,10 @@ export LC_CTYPE=en_US.utf8
 export WORKON_HOME=$HOME/.local/share/virtualenvs
 
 ### XDG ###
-XDG_CONFIG_HOME=/home/dandy/.config
-XDG_DATA_HOME=/home/dandy/.local/share
-XDSG_DATA_DIRS=/home/dandy/.local/share
-XDG_CACHE_HOME=/home/dandy/.cache
+XDG_CONFIG_HOME=$HOME/.config
+XDG_DATA_HOME=$HOME/.local/share
+XDG_DATA_DIRS=$HOME/.local/share
+XDG_CACHE_HOME=$HOME/.cache
 
 XDG_DOCUMENTS_DIR="$HOME/docs"
 XDG_DOWNLOAD_DIR="$HOME/downloads"
