@@ -115,27 +115,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-
-###################
-####    OWN    ####
-###################
-
-export PATH=$PATH:$HOME/.cask/bin:$HOME/bin
-
-export ALTERNATE_EDITOR=""
-export EDITOR="emacsclient -t"
-export VISUAL="emacsclient -c -a emacs"
-
-#export XDG_DATA_DIRS=/home/dandy/.local
-
-#######################
-####    ALIASES    ####
-#######################
-
-alias sspnd="systemctl suspend"
-alias dwn="systemctl shutdown"
-alias cfgadm="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
-alias temacs="emacsclient -t"
-alias megatrans="/usr/bin/mega-transfers --show-syncs --limit=1000"
-alias dired='emacsclient -t -e "(dired  \"./\")"'
