@@ -61,7 +61,8 @@ gaps inner 15
 
 bindsym $mod+Return exec termite
 bindsym $mod+Shift+q kill
-bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec --no-startup-id "/usr/local/bin/dmenu_run -i -c -l 15 -nf '#efefef' -nb '#0e020d' -sb '#9af4f2' -sf '#000000'"
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 bindsym $mod+h focus left
