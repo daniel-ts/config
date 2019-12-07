@@ -8,4 +8,27 @@ xdired() {
     else
 	/usr/local/bin/emacsclient -c $1 &  disown %-
     fi
+    return 0
+}
+
+mount-blockdev() {
+    choice=`lsblk -lin -o PATH,LABEL \
+	| grep -v "^/dev/sda\|/dev/sd.\s" \
+	| dmenu -i -c -l 15 \
+	| awk '{print $1}'`\
+	&& mntpoint=`udisksctl mount -b $choice`\
+	&& notify-send "$mntpoint"
+    return 0
+}
+
+unmount-blockdev() {
+    # sollte MOUNTPOINT und RM (removable) haben
+
+    choice=`lsblk -lin -o MOUNTPOINT,PATH,RM \
+    		   | awk '/^\/.* 1$/ { print $1, $2 }' \
+		   | dmenu -i -c -l 15 \
+		   | awk '{ print $2 }'`\
+	&& msg=`udisksctl unmount -b $choice `\
+	&& notify-send "$msg"
+    return 0
 }
