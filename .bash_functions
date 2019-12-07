@@ -12,8 +12,8 @@ xdired() {
 }
 
 mount-blockdev() {
-    choice=`lsblk -lin -o PATH,LABEL \
-	| grep -v "^/dev/sda\|/dev/sd.\s" \
+    choice=`lsblk -lin -o PATH,LABEL,HOTPLUG,MOUNTPOINT \
+	| awk '/ 1 $/ { print $1, $2}' \
 	| dmenu -i -c -l 15 \
 	| awk '{print $1}'`\
 	&& mntpoint=`udisksctl mount -b $choice`\
