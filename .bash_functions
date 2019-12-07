@@ -12,7 +12,8 @@ xdired() {
 }
 
 mount-blockdev() {
-    choice=`lsblk -lin -o PATH,LABEL,HOTPLUG,MOUNTPOINT \
+    choice=`lsblk -lin -o PATH,LABEL,TYPE,HOTPLUG,MOUNTPOINT \
+        | grep -v 'disk' \
 	| awk '/ 1 $/ { print $1, $2}' \
 	| dmenu -i -c -l 15 \
 	| awk '{print $1}'`\
