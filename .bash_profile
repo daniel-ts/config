@@ -2,7 +2,7 @@
 #    Eigene .bash_profile settings    #
 #######################################
 
-# sourcees
+# sources
 if [ -f $HOME/.bash_functions ]; then
     source $HOME/.bash_functions
 fi

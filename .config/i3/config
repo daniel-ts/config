@@ -101,6 +101,8 @@ bindsym XF86AudioMute exec --no-startup-id "pamixer -t"
 
 bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10"
 bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10"
+bindsym $mod+F8 exec --no-startup-id "bash -lc 'mount-blockdev'"
+bindsym $mod+Shift+F8 exec --no-startup-id "bash -lc 'unmount-blockdev'"
 #bindsym $ctrl+$alt+l exec --no-startup-id "/usr/bin/i3lock --ignore-empty-password --image=/home/dandy/.sysimg/lockscreen.png"
 #bindsym Control+Alt+l exec --no-startup-id "/usr/bin/i3lock --ignore-empty-password --image=/home/dandy/.sysimg/lockscreen.png"
 

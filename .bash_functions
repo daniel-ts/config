@@ -24,7 +24,6 @@ mount-blockdev() {
 
 unmount-blockdev() {
     # sollte MOUNTPOINT und RM (removable) haben
-
     choice=`lsblk -lin -o MOUNTPOINT,PATH,RM \
     		   | awk '/^\/.* 1$/ { print $1, $2 }' \
 		   | dmenu -i -c -l 15 \
