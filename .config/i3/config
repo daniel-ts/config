@@ -13,8 +13,9 @@ floating_modifier $mod
 ####    ext scripts    ####
 ###########################
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+#exec_always $HOME/.config/polybar/launch.sh
 exec --no-startup-id xcompmgr
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 ##########################
 ####    Xresources    ####
