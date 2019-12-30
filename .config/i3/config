@@ -96,9 +96,9 @@ bindsym $mod+o exec --no-startup-id "/usr/local/bin/emacsclient -c /home/dandy/"
 bindsym $mod+m exec --no-startup-id "firefox --new-window"
 bindsym $mod+Shift+m exec --no-startup-id "firefox --private-window www.duckduckgo.com"
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id "pamixer -i 10"
-bindsym XF86AudioLowerVolume exec --no-startup-id "pamixer -d 10"
-bindsym XF86AudioMute exec --no-startup-id "pamixer -t"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "pulsemixer --change-volume +10"
+bindsym XF86AudioLowerVolume exec --no-startup-id "pulsemixer --change-volume -10"
+bindsym XF86AudioMute exec --no-startup-id "pulsemixer --toggle-mute"
 
 bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10"
 bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10"

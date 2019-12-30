@@ -24,11 +24,10 @@ mount-blockdev() {
 
 unmount-blockdev() {
     # sollte MOUNTPOINT und RM (removable) haben
-    choice=`lsblk -lin -o MOUNTPOINT,PATH,RM \
+    choice= $(lsblk -lin -o MOUNTPOINT,PATH,HOTPLUG \
     		   | awk '/^\/.* 1$/ { print $1, $2 }' \
 		   | dmenu -i -c -l 15 \
-		   | awk '{ print $2 }'`\
-	&& msg=`udisksctl unmount -b $choice `\
-	&& notify-send "$msg"
+		   | awk '{ print $2 }') \
+	&& msg=$(udisksctl unmount -b $choice) | notify-send -
     return 0
 }

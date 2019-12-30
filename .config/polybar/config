@@ -17,24 +17,19 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
 background = ${xrdb:background}
 background-alt = #444
-;foreground = ${xrdb:color7:#222}
 foreground = ${xrdb:color14}
 foreground-alt = ${xrdb:color6}
 primary = ${xrdb:color5}
 secondary = ${xrdb:color9}
 alert = ${xrdb:color1}
 
-[bar/example]
-;monitor = ${env:MONITOR:HDMI-1}
+[bar/status]
 width = 100%
 height = 27
-;offset-x = 1%
-;offset-y = 1%
 radius = 6.0
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -57,12 +52,13 @@ font-0 = misc fixed:size=15
 font-1 = unifont:size=15
 font-2 = "Font Awesome 5 Free:style=Regular"
 font-3 = "Font Awesome 5 Free:style=Solid"
-font-4 = "Liberation Sans:style=Regular"
+font-4 = "Siji:style=Regular"
+font-5 = "Liberation Sans:style=Regular"
 
 modules-left = i3
-modules-center =
+modules-center = date
 ;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
-modules-right = filesystem pulseaudio memory cpu wlan eth battery date
+modules-right = pulseaudio memory cpu wlan eth battery
 
 
 tray-position = right
@@ -218,22 +214,28 @@ type = internal/network
 interface = wlp2s0
 interval = 3.0
 
-format-connected = <label-connected>
+format-connected = <label-connected> <ramp-signal>
 ;format-connected-underline = #9f78e1
-label-connected =  %essid%
-
-format-disconnected =
+label-connected = 
+;format-disconnected = x
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-; ramp-signal-0 =
-; ramp-signal-1 =
-; ramp-signal-2 =
-; ramp-signal-3 =
-; ramp-signal-4 =
+; ramp-signal-0 =x
+; ramp-signal-1 =.
+; ramp-signal-2 =%{T4}:%{T-}
+; ramp-signal-3 =:.
+; ramp-signal-4 =::
 ; ramp-signal-foreground = ${colors.foreground-alt}
+ramp-signal-0 =x
+ramp-signal-1 = %{T6}|%{T-}
+ramp-signal-2 = %{T6}||%{T-}
+;;ramp-signal-2 =||
+ramp-signal-3 = %{T6}|||%{T-}
+ramp-signal-4 = %{T6}||||%{T-}
+
 
 [module/eth]
 type = internal/network
@@ -241,9 +243,9 @@ interface = enp4s0
 interval = 3.0
 
 format-connected-underline = #55aa55
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
+format-connected-prefix = " "
+;format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %linkspeed%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -270,31 +272,18 @@ label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
 
-format-volume = <label-volume> <bar-volume>
-label-volume =  %percentage%%
-;label-volume-foreground = ${root.foreground}
-label-volume-foreground = ${colors.foreground-alt}
-
-label-muted =  muted
+format-volume = <label-volume> <ramp-volume>
+label-volume = 
+label-muted = x
 label-muted-foreground = #666
 
-bar-volume-width = 8
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+ramp-volume-0 ="%{T6}    %{T-}"
+ramp-volume-1 ="%{T6}|   %{T-}"
+ramp-volume-2 ="%{T6}||  %{T-}"
+ramp-volume-3 ="%{T6}||| %{T-}"
+ramp-volume-4 ="%{T6}||||%{T-}"
 
 [module/battery]
 type = internal/battery
