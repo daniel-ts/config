@@ -7,6 +7,15 @@
 
 [[ $DISPLAY ]] && shopt -s checkwinsize
 
+shopt -s histappend
+HISTSIZE=1000
+HISTFILESIZE=2000
+shopt -s globstar
+
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 alias ls='ls --color'
 LS_COLORS='di=1;34:ln=32:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=1;33'
 export LS_COLORS
