@@ -7,6 +7,10 @@
 
 [[ $DISPLAY ]] && shopt -s checkwinsize
 
+alias ls='ls --color'
+LS_COLORS='di=1;34:ln=32:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=1;33'
+export LS_COLORS
+
 PS1='[\u@\h \W]\$ '
 
 case ${TERM} in
