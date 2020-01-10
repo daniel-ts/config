@@ -17,10 +17,10 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias ls='ls --color'
-LS_COLORS='di=1;34:ln=32:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=1;33'
+LS_COLORS='di=1;34:ln=32:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=1;33:*.pdf=35:*.epub=35:*.tar=31:*.tar.gz=31:*tar.xz=31:*.zip=31'
 export LS_COLORS
 
-PS1='[\u@\h \W]\$ '
+PS1='\[\033[01;31m\][\[\033[00m\]\u@\h \W\[\033[01;31m\]]\[\033[00m\]\$ '
 
 case ${TERM} in
   xterm*|rxvt*|Eterm|aterm|kterm|gnome*)

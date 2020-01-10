@@ -232,9 +232,9 @@ label-connected = 
 ramp-signal-0 =x
 ramp-signal-1 = %{T6}|%{T-}
 ramp-signal-2 = %{T6}||%{T-}
-;;ramp-signal-2 =||
 ramp-signal-3 = %{T6}|||%{T-}
 ramp-signal-4 = %{T6}||||%{T-}
+ramp-signal-5 = %{T6}|||||%{T-}
 
 
 [module/eth]
