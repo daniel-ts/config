@@ -16,10 +16,10 @@ hyperlinks = true
 browser = xdg-open
 
 # "system", "on" or "off"
-cursor_blink = on
+cursor_blink = off
 
 # "block", "underline" or "ibeam"
-cursor_shape = ibeam
+cursor_shape = block
 
 # "off", "left" or "right"
 scrollbar = off

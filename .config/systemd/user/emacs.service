@@ -10,7 +10,7 @@ Documentation=info:emacs man:emacs(1) https://gnu.org/software/emacs/
 Type=simple
 ExecStart=emacs --fg-daemon
 ExecStop=emacsclient --eval "(kill-emacs)"
-Environment=SSH_AUTH_SOCK=%t/keyring/ssh
+Environment=SSH_AUTH_SOCK=%t/ssh-agent.socket
 Restart=on-failure
 
 [Install]
