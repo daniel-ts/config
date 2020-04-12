@@ -27,3 +27,8 @@ export SSH_AUTH_SOCK="/run/user/1000/ssh-agent.socket"
 if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init -)"
 fi
+
+### startx on login on tty1, must be last call ###
+if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+  exec startx
+fi
