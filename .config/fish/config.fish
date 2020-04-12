@@ -12,6 +12,7 @@ alias megatrans="/usr/bin/mega-transfers --show-syncs --limit=1000 | less"
 alias dired='emacsclient -t -e "(dired  \"./\")"'
 alias magit="emacsclient -t -e (printf \"(magit-status-setup-buffer \"%s\")\" (git rev-parse))"
 alias clip='xclip -i -selection clipboard'
+alias xkcdpass='xkcdpass --delimiter "" --case capitalize'
 #alias xdired='emacsclient -c -e "(dired  \"./\")"'
 
 # set environment
