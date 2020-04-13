@@ -1,0 +1,10 @@
+# menu key (between AltGr and right CTRL) was substituted to be the compose key
+# key sequences will be converted to characters not present on the keyboard
+# default file is /usr/share/X11/locale/en_US.UTF-8/Compose
+
+include "%L"
+
+
+<Multi_key> <g> <a> : "α"
+<Multi_key> <g> <b> : "β"
+<Multi_key> <g> <g> : "γ"
