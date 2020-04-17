@@ -14,7 +14,8 @@ floating_modifier $mod
 ###########################
 
 #exec --no-startup-id xcompmgr
-exec_always --no-startup-id picom --blur-method dual_kawase --blur-strength 10 --experimental-backends
+#exec_always --no-startup-id picom --blur-method dual_kawase --blur-strength 10 --experimental-backends
+exec --no-startup-id picom --experimental-backends
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 ##########################
