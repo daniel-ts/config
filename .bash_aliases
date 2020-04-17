@@ -1,4 +1,4 @@
-#
+# -*- mode: shell-script -*-
 # my aliases
 
 alias sspnd="systemctl suspend"

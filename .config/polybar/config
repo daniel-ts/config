@@ -46,9 +46,11 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = misc fixed:size=15
+;font-0 = misc fixed:size=15
 ;font-0 = Liberation Sans:pixelsize=16:style=Regular
 ;font-0 = Adobe Helvetica:antialis:pixelsize=16:style=Regular
+;font-0 = "Ubuntu Condesed:style=Regular:size=13"
+font-0 = "Ubuntu Mono:style=Regular:size=14"
 font-1 = unifont:size=15
 font-2 = "Font Awesome 5 Free:style=Regular"
 font-3 = "Font Awesome 5 Free:style=Solid"
