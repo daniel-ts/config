@@ -1,0 +1,12 @@
+# file: dired.desktop
+
+[Desktop Entry]
+
+Type=Application
+Name=emacs-dired
+Comment=Opens xdg mime type file in emacs dired
+#Icon= path: /$XDG_DATA_DIRS/icons or /usr/share/pixmaps/electron.png
+Exec=/usr/bin/emacsclient -c -e '(dired "%u")'
+Terminal=false
+MimeType=inode/directory
+#Categories=Utilities
