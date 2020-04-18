@@ -6,6 +6,9 @@ usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
+# environment variables
+export SSH_ASKPASS=/usr/lib/seahorse/ssh-askpass
+
 # merge in defaults and keymaps
 
 if [ -f $sysresources ]; then

@@ -1,7 +1,7 @@
 
 set $mod Mod4
-set $ctrl 0xffe3
-set $alt  0xffe9
+set $ctrl Control_L
+set $alt  Alt_L
 
 font pango:monospace 8
 #font pango:DejaVu Sans Mono 8
@@ -93,7 +93,6 @@ bindsym $mod+Shift+d focus child
 bindsym $mod+Shift+n exec --no-startup-id termite -e "/usr/bin/emacsclient -t"
 bindsym $mod+Shift+Return exec --no-startup-id "/usr/bin/emacsclient -c -e '(vterm)'"
 bindsym $mod+n exec --no-startup-id "/usr/bin/emacsclient -c -a emacs"
-#bindsym $mod+o exec --no-startup-id '/usr/bin/emacsclient -c -e "(dired \"/home/dandy\")"'
 bindsym $mod+o exec --no-startup-id "/usr/bin/emacsclient -c /home/dandy/"
 bindsym $mod+m exec --no-startup-id "firefox --new-window"
 bindsym $mod+Shift+m exec --no-startup-id "firefox --private-window www.duckduckgo.com"
@@ -103,14 +102,14 @@ bindsym XF86AudioLowerVolume exec --no-startup-id "pulsemixer --change-volume -1
 bindsym XF86AudioMute exec --no-startup-id "pulsemixer --toggle-mute"
 
 # 0x2d: dash "-"
-bindsym $mod+0x2d exec --no-startup-id "/usr/bin/i3lock -e --screen=0 --blur=7 --clock --timecolor=ffffffff --datecolor=ffffffff"
+#bindsym $mod+0x2d exec --no-startup-id "/usr/bin/i3lock -e --screen=0 --blur=7 --clock --timecolor=ffffffff --datecolor=ffffffff"
+
+bindsym $mod+y+l exec --no-startup-id "/usr/bin/i3lock -e --screen=0 --blur=7 --clock --timecolor=ffffffff --datecolor=ffffffff"
 
 bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight -inc 10"
 bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -dec 10"
 bindsym $mod+F8 exec --no-startup-id "bash -lc 'mount-blockdev'"
 bindsym $mod+Shift+F8 exec --no-startup-id "bash -lc 'unmount-blockdev'"
-#bindsym $ctrl+$alt+l exec --no-startup-id "/usr/bin/i3lock --ignore-empty-password --image=/home/dandy/.sysimg/lockscreen.png"
-#bindsym Control+Alt+l exec --no-startup-id "/usr/bin/i3lock --ignore-empty-password --image=/home/dandy/.sysimg/lockscreen.png"
 
 
 # Define names for default workspaces for which we configure key bindings later on.
@@ -168,3 +167,14 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
+
+mode "secondary" {
+     bindsym l exec --no-startup-id "/usr/bin/i3lock -e --screen=0 --blur=7 --clock --timecolor=ffffffff --datecolor=ffffffff" mode "default"
+     bindsym s exec --no-startup-id "$HOME/bin/ssh_add" mode "default"
+     bindsym k exec --no-startup-id "/usr/bin/keepass" mode "default"
+
+     bindsym Return mode "default"
+     bindsym Escape mode "default"
+     bindsym $mod+r mode "default"
+}
+bindsym $mod+i mode "secondary"
