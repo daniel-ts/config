@@ -172,6 +172,7 @@ mode "secondary" {
      bindsym l exec --no-startup-id "/usr/bin/i3lock -e --screen=0 --blur=7 --clock --timecolor=ffffffff --datecolor=ffffffff" mode "default"
      bindsym s exec --no-startup-id "$HOME/bin/ssh_add" mode "default"
      bindsym k exec --no-startup-id "/usr/bin/keepass" mode "default"
+     bindsym m exec --no-startup-id "/usr/bin/torbrowser-launcher" mode "default"
 
      bindsym Return mode "default"
      bindsym Escape mode "default"
