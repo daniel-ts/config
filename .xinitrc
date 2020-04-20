@@ -38,6 +38,5 @@ fi
 
 #feh --bg-center /home/dandy/pics/Wallpapers/synthwave/neon/neon-sunset.jpg
 nitrogen --set-centered --restore
-nm-applet
 conky -p 1 > /dev/null
 exec i3

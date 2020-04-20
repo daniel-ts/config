@@ -17,6 +17,7 @@ floating_modifier $mod
 #exec_always --no-startup-id picom --blur-method dual_kawase --blur-strength 10 --experimental-backends
 exec --no-startup-id picom --experimental-backends
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id nm-applet
 
 ##########################
 ####    Xresources    ####
