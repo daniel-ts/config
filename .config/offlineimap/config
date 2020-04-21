@@ -1,6 +1,6 @@
 [general]
-#,asta,posteo
-accounts = uni
+
+accounts = uni,asta,posteo
 maxsyncaccounts = 1
 # needs python2
 pythonfile = ~/.config/offlineimap/offlineimap.py
