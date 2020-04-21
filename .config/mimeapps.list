@@ -1,13 +1,11 @@
-# -*- mode: conf-windows -*-
-# file: mimeapps.list
-
-; like:
 [Added Associations]
 inode/directory=dired.desktop
 application/x-bittorrent=transmission_remote.desktop
 x-scheme-handler/magnet=transmission_remote.desktop
+application/pdf=emacs-pdf.desktop
 
 [Removed Associations]
 
 [Default Applications]
 inode/directory=dired.desktop
+application/pdf=emacs-pdf.desktop
