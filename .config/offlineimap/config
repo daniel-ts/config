@@ -1,0 +1,100 @@
+[general]
+accounts = uni,asta,posteo
+maxsyncaccounts = 1
+# needs python2
+pythonfile = ~/.config/offlineimap/offlineimap.py
+
+### uni ###
+[Account uni]
+localrepository = LocalUni
+remoterepository = RepositoryUni
+autorefresh = 5
+quick = 10
+postsynchook = mu index --maildir ~/maildir/uni
+status_backend = sqlite
+
+[Reposiroty LocalUni]
+type = Maildir
+localfolders = ~/maildir/uni
+
+[Reposiroty RepositoryUni]
+type = IMAP
+maxconnections = 2
+remotehost = groupware.tu-braunschweig.de
+remoteusereval = get_username("uni")
+remotepasseval = get_password("uni")
+# sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+ssl = yes
+sslcacertfile = OS-DEFAULT
+
+
+### AStA ###
+[Account asta]
+localrepository = LocalAsta
+remoterepository = RepositoryAsta
+autorefresh = 5
+quick = 10
+postsynchook = mu index --maildir ~/maildir/asta
+status_backend = sqlite
+
+[Reposiroty LocalAsta]
+type = Maildir
+localfolders = ~/maildir/asta
+
+[Reposiroty RepositoryAsta]
+type = IMAP
+maxconnections = 2
+remotehost = groupware.tu-braunschweig.de
+remoteusereval = get_username("asta")
+remotepasseval = get_password("asta")
+# sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+ssl = yes
+sslcacertfile = OS-DEFAULT
+
+
+### posteo ###
+[Account posteo]
+localrepository = LocalPosteo
+remoterepository = RepositoryPosteo
+autorefresh = 5
+quick = 10
+postsynchook = mu index --maildir ~/maildir
+status_backend = sqlite
+
+[Reposiroty LocalPosteo]
+type = Maildir
+localfolders = ~/maildir/posteo
+
+[Reposiroty RepositoryPosteo]
+type = IMAP
+maxconnections = 2
+remotehost = posteo.
+remoteusereval = get_username("asta")
+remotepasseval = get_password("asta")
+# sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+ssl = yes
+sslcacertfile = OS-DEFAULT
+
+
+### hotmail ###
+# [Account hotmail]
+# localrepository = LocalHotmail
+# remoterepository = RepositoryHotmail
+# autorefresh = 5
+# quick = 10
+# postsynchook = mu index --maildir ~/maildir/hotmail
+# status_backend = sqlite
+
+# [Reposiroty LocalHotmail]
+# type = Maildir
+# localfolders = ~/maildir/posteo
+
+# [Reposiroty RepositoryHotmail]
+# type = IMAP
+# maxconnections = 2
+# remotehost = posteo.de
+# remoteusereval = get_username("asta")
+# remotepasseval = get_password("asta")
+# # sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+# ssl = yes
+# sslcacertfile = OS-DEFAULT

@@ -1,0 +1,12 @@
+# file: emacs-pdf.desktop
+
+[Desktop Entry]
+
+Type=Application
+Name=emacs-pdf
+Comment=Opens xdg pdf mime type file in emacs-pdf-tools
+#Icon= path: /$XDG_DATA_DIRS/icons or /usr/share/pixmaps/electron.png
+Exec=/usr/bin/emacsclient -c
+Terminal= false
+MimeType=application/pdf
+# Categories=Education;Languages;Java
