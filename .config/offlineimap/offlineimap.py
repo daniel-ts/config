@@ -14,7 +14,7 @@ def decrypt_store():
     ).strip("\n")
 
 def get_username(acc):
-    return json.loads( decrypt_path() )[acc]['user']
+    return json.loads( decrypt_store() )[acc]['user']
 
 def get_password(acc):
-    return json.loads( decrypt_path() )[acc]['pass']
+    return json.loads( decrypt_store() )[acc]['pass']

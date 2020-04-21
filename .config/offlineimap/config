@@ -1,5 +1,6 @@
 [general]
-accounts = uni,asta,posteo
+#,asta,posteo
+accounts = uni
 maxsyncaccounts = 1
 # needs python2
 pythonfile = ~/.config/offlineimap/offlineimap.py
@@ -8,16 +9,15 @@ pythonfile = ~/.config/offlineimap/offlineimap.py
 [Account uni]
 localrepository = LocalUni
 remoterepository = RepositoryUni
-autorefresh = 5
+autorefresh = 10
 quick = 10
-postsynchook = mu index --maildir ~/maildir/uni
-status_backend = sqlite
+#postsynchook = mu index --maildir ~/maildir/uni
 
-[Reposiroty LocalUni]
+[Repository LocalUni]
 type = Maildir
 localfolders = ~/maildir/uni
 
-[Reposiroty RepositoryUni]
+[Repository RepositoryUni]
 type = IMAP
 maxconnections = 2
 remotehost = groupware.tu-braunschweig.de
@@ -32,16 +32,16 @@ sslcacertfile = OS-DEFAULT
 [Account asta]
 localrepository = LocalAsta
 remoterepository = RepositoryAsta
-autorefresh = 5
+autorefresh = 10
 quick = 10
 postsynchook = mu index --maildir ~/maildir/asta
-status_backend = sqlite
 
-[Reposiroty LocalAsta]
+
+[Repository LocalAsta]
 type = Maildir
 localfolders = ~/maildir/asta
 
-[Reposiroty RepositoryAsta]
+[Repository RepositoryAsta]
 type = IMAP
 maxconnections = 2
 remotehost = groupware.tu-braunschweig.de
@@ -59,13 +59,12 @@ remoterepository = RepositoryPosteo
 autorefresh = 5
 quick = 10
 postsynchook = mu index --maildir ~/maildir
-status_backend = sqlite
 
-[Reposiroty LocalPosteo]
+[Repository LocalPosteo]
 type = Maildir
 localfolders = ~/maildir/posteo
 
-[Reposiroty RepositoryPosteo]
+[Repository RepositoryPosteo]
 type = IMAP
 maxconnections = 2
 remotehost = posteo.
@@ -83,13 +82,12 @@ sslcacertfile = OS-DEFAULT
 # autorefresh = 5
 # quick = 10
 # postsynchook = mu index --maildir ~/maildir/hotmail
-# status_backend = sqlite
 
-# [Reposiroty LocalHotmail]
+# [Repository LocalHotmail]
 # type = Maildir
 # localfolders = ~/maildir/posteo
 
-# [Reposiroty RepositoryHotmail]
+# [Repository RepositoryHotmail]
 # type = IMAP
 # maxconnections = 2
 # remotehost = posteo.de
