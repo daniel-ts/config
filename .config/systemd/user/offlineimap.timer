@@ -1,0 +1,11 @@
+[Unit]
+Description=run offlineimap.service every 15m
+Requires=offlineimap.service
+
+[Timer]
+Unit=offlineimap.service
+OnUnitInactiveSec=15m
+AccuracySec=1s
+
+[Install]
+WantedBy=default.target

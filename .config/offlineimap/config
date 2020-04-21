@@ -1,6 +1,6 @@
 [general]
-
-accounts = uni,asta,posteo
+#,asta,posteo
+accounts = uni
 maxsyncaccounts = 1
 # needs python2
 pythonfile = ~/.config/offlineimap/offlineimap.py
@@ -9,9 +9,9 @@ pythonfile = ~/.config/offlineimap/offlineimap.py
 [Account uni]
 localrepository = LocalUni
 remoterepository = RepositoryUni
-autorefresh = 10
+#autorefresh = 10
 quick = 10
-#postsynchook = mu index --maildir ~/maildir/uni
+postsynchook = mu index --lazy-check
 
 [Repository LocalUni]
 type = Maildir
@@ -32,9 +32,9 @@ sslcacertfile = OS-DEFAULT
 [Account asta]
 localrepository = LocalAsta
 remoterepository = RepositoryAsta
-autorefresh = 10
+#autorefresh = 10
 quick = 10
-postsynchook = mu index --maildir ~/maildir/asta
+postsynchook = mu index --lazy-check
 
 
 [Repository LocalAsta]
@@ -47,6 +47,7 @@ maxconnections = 2
 remotehost = groupware.tu-braunschweig.de
 remoteusereval = get_username("asta")
 remotepasseval = get_password("asta")
+folderfilter = lambda foldername: foldername in ['INBOX', 'INBOX/Bestellungen-Rechnungen', 'INBOX/GITZ%%20Tickets', 'Systemmails', 'Sent']
 # sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 ssl = yes
 sslcacertfile = OS-DEFAULT
@@ -56,9 +57,9 @@ sslcacertfile = OS-DEFAULT
 [Account posteo]
 localrepository = LocalPosteo
 remoterepository = RepositoryPosteo
-autorefresh = 5
+#autorefresh = 5
 quick = 10
-postsynchook = mu index --maildir ~/maildir
+postsynchook = mu index --lazy-check
 
 [Repository LocalPosteo]
 type = Maildir
@@ -67,9 +68,9 @@ localfolders = ~/maildir/posteo
 [Repository RepositoryPosteo]
 type = IMAP
 maxconnections = 2
-remotehost = posteo.
-remoteusereval = get_username("asta")
-remotepasseval = get_password("asta")
+remotehost = posteo.de
+remoteusereval = get_username("posteo")
+remotepasseval = get_password("posteo")
 # sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 ssl = yes
 sslcacertfile = OS-DEFAULT
@@ -79,9 +80,9 @@ sslcacertfile = OS-DEFAULT
 # [Account hotmail]
 # localrepository = LocalHotmail
 # remoterepository = RepositoryHotmail
-# autorefresh = 5
+# #autorefresh = 5
 # quick = 10
-# postsynchook = mu index --maildir ~/maildir/hotmail
+# postsynchook = mu index
 
 # [Repository LocalHotmail]
 # type = Maildir
