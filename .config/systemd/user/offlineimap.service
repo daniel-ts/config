@@ -1,0 +1,11 @@
+[Unit]
+Description=local syncing of mails into ~/maildir
+Documentation=man:offlineimap(1)
+After=network.target network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/offlineimap
+
+[Install]
+WantedBy=default.target
