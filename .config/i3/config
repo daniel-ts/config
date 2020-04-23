@@ -17,6 +17,8 @@ floating_modifier $mod
 #exec_always --no-startup-id picom --blur-method dual_kawase --blur-strength 10 --experimental-backends
 exec --no-startup-id picom --experimental-backends
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id megasync
+exec --no-startup-id conky -qp 1
 exec --no-startup-id nm-applet
 
 ##########################
@@ -48,6 +50,8 @@ set_from_resource $light_white i3wn.color15
 
 # no window title bars
 for_window [class=".*"] border pixel 3
+for_window [class="(?i)conky"] border none
+
 
 
 # class                 border  backgr. text    indicator       child_border

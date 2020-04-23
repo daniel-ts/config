@@ -4,9 +4,9 @@
 
 Type=Application
 Name=transmission_remote
-Comment=Opens a bittorrent link
+Comment=Send a bit torrent link to transmission-daemon
 #Icon= path: /$XDG_DATA_DIRS/icons or /usr/share/pixmaps/electron.png
-Exec=$HOME/bin/transmission_remote %u
+Exec=/home/dandy/bin/transmission_remote %u
 Terminal= false
 MimeType=application/x-bittorrent;x-scheme-handler/magnet
 # Categories=Education;Languages;Java
