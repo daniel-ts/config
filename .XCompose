@@ -4,7 +4,18 @@
 
 include "%L"
 
-
+# greek letters
 <Multi_key> <g> <a> : "α"
+<Multi_key> <g> <A> : "Α"
 <Multi_key> <g> <b> : "β"
+<Multi_key> <g> <B> : "Β"
 <Multi_key> <g> <g> : "γ"
+<Multi_key> <g> <G> : "Γ"
+
+<Multi_key> <g> <o> : "ω"
+<Multi_key> <g> <O> : "Ω"
+
+# math symbols
+<Multi_key> <m> <e> : "∈"
+<Multi_key> <m> <n> <e> : "∉"
+<Multi_key> <m> <s> : "⊆"

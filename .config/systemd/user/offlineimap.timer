@@ -4,7 +4,7 @@ Requires=offlineimap.service
 
 [Timer]
 Unit=offlineimap.service
-OnUnitInactiveSec=15m
+OnActiveSec=15m
 AccuracySec=1s
 
 [Install]

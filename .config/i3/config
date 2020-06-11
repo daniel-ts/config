@@ -67,7 +67,7 @@ gaps inner 15
 ####    KBDs    ####
 ####################
 
-bindsym $mod+Return exec termite
+bindsym $mod+Shift+Return exec termite
 bindsym $mod+Shift+q kill
 #bindsym $mod+d exec dmenu_run
 bindsym $mod+d exec --no-startup-id "/usr/bin/rofi -show run"
@@ -96,7 +96,7 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+d focus child
 
 bindsym $mod+Shift+n exec --no-startup-id termite -e "/usr/bin/emacsclient -t"
-bindsym $mod+Shift+Return exec --no-startup-id "/usr/bin/emacsclient -c -e '(vterm)'"
+bindsym $mod+Return exec --no-startup-id "/usr/bin/emacsclient -c -e '(multi-vterm-next)'"
 bindsym $mod+n exec --no-startup-id "/usr/bin/emacsclient -c -a emacs"
 bindsym $mod+o exec --no-startup-id "/usr/bin/emacsclient -c /home/dandy/"
 bindsym $mod+m exec --no-startup-id "firefox --new-window"
@@ -176,7 +176,7 @@ bindsym $mod+r mode "resize"
 mode "secondary" {
      bindsym l exec --no-startup-id "/usr/bin/i3lock -e --screen=0 --blur=7 --clock --timecolor=ffffffff --datecolor=ffffffff" mode "default"
      bindsym s exec --no-startup-id "$HOME/bin/ssh_add" mode "default"
-     bindsym k exec --no-startup-id "/usr/bin/keepass" mode "default"
+     bindsym k exec --no-startup-id "/usr/bin/keepassxc" mode "default"
      bindsym m exec --no-startup-id "/usr/bin/torbrowser-launcher" mode "default"
 
      bindsym Return mode "default"

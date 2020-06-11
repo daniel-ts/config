@@ -1,6 +1,6 @@
 [general]
-#,asta,posteo
-accounts = uni
+
+accounts = uni,asta,posteo
 maxsyncaccounts = 1
 # needs python2
 pythonfile = ~/.config/offlineimap/offlineimap.py
@@ -47,7 +47,7 @@ maxconnections = 2
 remotehost = groupware.tu-braunschweig.de
 remoteusereval = get_username("asta")
 remotepasseval = get_password("asta")
-folderfilter = lambda foldername: foldername in ['INBOX', 'INBOX/Bestellungen-Rechnungen', 'INBOX/GITZ%%20Tickets', 'Systemmails', 'Sent']
+#folderfilter = lambda foldername: foldername in ['INBOX', 'INBOX/Bestellungen-Rechnungen', 'INBOX/GITZ%%20Tickets', 'Systemmails', 'Sent']
 # sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 ssl = yes
 sslcacertfile = OS-DEFAULT
