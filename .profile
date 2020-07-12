@@ -5,6 +5,11 @@
 ### python ###
 export WORKON_HOME=$HOME/.local/share/virtualenvs
 export PYENV_ROOT=$HOME/.local/share/pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export PATH="$HOME/.local/share/poetry/bin:$PATH"
+
 
 ### java ###
 export JAVA_HOME=/usr/lib/jvm/default
@@ -29,7 +34,3 @@ export VISUAL="emacsclient -c -a emacs"
 export SSH_AUTH_SOCK="/run/user/1000/ssh-agent.socket"
 
 ### other ###
-
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"

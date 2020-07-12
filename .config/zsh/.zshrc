@@ -99,6 +99,13 @@ source $ZSH/oh-my-zsh.sh
 
 source $HOME/.bash_aliases
 
+# source .profile
+if [ -f "$HOME/.profile" ]; then
+    source $HOME/.profile
+fi
+
+# emacs #
+
 # emacs libvterm
 function vterm_printf(){
     if [ -n "$TMUX" ]; then
