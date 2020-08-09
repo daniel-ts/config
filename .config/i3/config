@@ -98,7 +98,6 @@ bindsym $mod+Shift+d focus child
 bindsym $mod+Shift+n exec --no-startup-id termite -e "/usr/bin/emacsclient -t"
 bindsym $mod+Return exec --no-startup-id "/usr/bin/emacsclient -c -e '(multi-vterm-next)'"
 bindsym $mod+n exec --no-startup-id "/usr/bin/emacsclient -c -a emacs"
-bindsym $mod+o exec --no-startup-id "/usr/bin/emacsclient -c /home/dandy/"
 bindsym $mod+m exec --no-startup-id "firefox --new-window"
 bindsym $mod+Shift+m exec --no-startup-id "firefox --private-window www.duckduckgo.com"
 
@@ -178,9 +177,23 @@ mode "secondary" {
      bindsym s exec --no-startup-id "$HOME/bin/ssh_add" mode "default"
      bindsym k exec --no-startup-id "/usr/bin/keepassxc" mode "default"
      bindsym m exec --no-startup-id "/usr/bin/torbrowser-launcher" mode "default"
+     bindsym m exec --no-startup-id "/usr/bin/torbrowser-launcher" mode "default"
+     bindsym p exec --no-startup-id "/usr/bin/termite -e /usr/bin/htop" mode "default"
 
      bindsym Return mode "default"
      bindsym Escape mode "default"
      bindsym $mod+r mode "default"
 }
 bindsym $mod+i mode "secondary"
+
+mode "open" {
+     bindsym o exec --no-startup-id "/usr/bin/emacsclient -c $HOME" mode "default"
+     bindsym t exec --no-startup-id "/usr/bin/emacsclient -c /mnt/wgshare/storage/torrents/downloads" mode "default"
+     bindsym d exec --no-startup-id "/usr/bin/emacsclient -c $HOME/downloads" mode "default"
+     bindsym i exec --no-startup-id "/usr/bin/emacsclient -c $HOME/books/inf" mode "default"
+
+     bindsym Return mode "default"
+     bindsym Escape mode "default"
+     bindsym $mod+r mode "default"
+}
+bindsym $mod+o mode "open"
