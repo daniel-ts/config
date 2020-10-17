@@ -29,7 +29,7 @@ export XDG_VIDEOS_DIR="$HOME/vids"
 ### environment
 export PATH=$PATH:$HOME/bin:$PYENV_ROOT/bin:$JAVA_HOME
 export ALTERNATE_EDITOR=""
-export EDITOR="emacsclient -t -a 'emacs -nw'"
+export EDITOR="emacsclient -c -a emacs"
 export VISUAL="emacsclient -c -a emacs"
 export SSH_AUTH_SOCK="/run/user/1000/ssh-agent.socket"
 

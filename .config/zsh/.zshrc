@@ -65,7 +65,7 @@ ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load?
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git pass)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -124,3 +124,7 @@ vterm_prompt_end() {
 }
 setopt PROMPT_SUBST
 PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
+
+# AStA pass
+export PASSWORD_STORE_DIR="$HOME/work/asta/git-repos/asta-pass"
+export TERM='xterm-256color'
