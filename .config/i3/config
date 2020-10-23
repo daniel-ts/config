@@ -15,7 +15,8 @@ floating_modifier $mod
 
 #exec --no-startup-id xcompmgr
 #exec_always --no-startup-id picom --blur-method dual_kawase --blur-strength 10 --experimental-backends
-exec --no-startup-id picom --experimental-backends
+exec --no-startup-id picom --blur-method dual_kawase --blur-strength 5 --experimental-backends
+#exec --no-startup-id picom --experimental-backends
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id megasync
 exec --no-startup-id conky -qp 1
@@ -26,23 +27,23 @@ exec --no-startup-id nm-applet
 ##########################
 
 #colors
-set_from_resource $black i3wn.color0
-set_from_resource $red i3wn.color1
-set_from_resource $yellow i3wn.color2
-set_from_resource $green i3wn.color3
-set_from_resource $blue i3wn.color4
-set_from_resource $magenta i3wn.color5
-set_from_resource $cyan i3wn.color6
-set_from_resource $white i3wn.color7
+set_from_resource $black i3wm.color0
+set_from_resource $red i3wm.color1
+set_from_resource $yellow i3wm.color2
+set_from_resource $green i3wm.color3
+set_from_resource $blue i3wm.color4
+set_from_resource $magenta i3wm.color5
+set_from_resource $cyan i3wm.color6
+set_from_resource $white i3wm.color7
 
-set_from_resource $light_black i3wn.color8
-set_from_resource $light_red i3wn.color9
-set_from_resource $light_yellow i3wn.color10
-set_from_resource $light_green i3wn.color11
-set_from_resource $light_blue i3wn.color12
-set_from_resource $light_magenta i3wn.color13
-set_from_resource $light_cyan i3wn.color14
-set_from_resource $light_white i3wn.color15
+set_from_resource $light_black i3wm.color8
+set_from_resource $light_red i3wm.color9
+set_from_resource $light_yellow i3wm.color10
+set_from_resource $light_green i3wm.color11
+set_from_resource $light_blue i3wm.color12
+set_from_resource $light_magenta i3wm.color13
+set_from_resource $light_cyan i3wm.color14
+set_from_resource $light_white i3wm.color15
 
 ##############################
 ####    BORDERS & GAPS    ####
@@ -97,7 +98,7 @@ bindsym $mod+Shift+d focus child
 
 bindsym $mod+Shift+n exec --no-startup-id termite -e "/usr/bin/emacsclient -t"
 bindsym $mod+Return exec --no-startup-id "/usr/bin/emacsclient -c -e '(multi-vterm-next)'"
-bindsym $mod+n exec --no-startup-id "/usr/bin/emacsclient -c -a emacs"
+bindsym $mod+n exec --no-startup-id "/usr/bin/emacsclient -c"
 bindsym $mod+m exec --no-startup-id "firefox --new-window"
 bindsym $mod+Shift+m exec --no-startup-id "firefox --private-window www.duckduckgo.com"
 
@@ -181,6 +182,11 @@ mode "secondary" {
      bindsym m exec --no-startup-id "/usr/bin/torbrowser-launcher" mode "default"
      bindsym m exec --no-startup-id "/usr/bin/torbrowser-launcher" mode "default"
      bindsym p exec --no-startup-id "/usr/bin/termite -e /usr/bin/htop" mode "default"
+
+
+     bindsym z gaps inner current toggle 0  mode "default"
+     bindsym 7 gaps inner current toggle 15  mode "default"
+     #bindsym Z gaps inner 15 mode "default"
 
      bindsym Return mode "default"
      bindsym Escape mode "default"
