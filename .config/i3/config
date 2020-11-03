@@ -182,10 +182,11 @@ mode "secondary" {
      bindsym m exec --no-startup-id "/usr/bin/torbrowser-launcher" mode "default"
      bindsym m exec --no-startup-id "/usr/bin/torbrowser-launcher" mode "default"
      bindsym p exec --no-startup-id "/usr/bin/termite -e /usr/bin/htop" mode "default"
+     bindsym u exec --no-startup-id "/usr/bin/pavucontrol" mode "default"
 
 
-     bindsym z gaps inner current toggle 0  mode "default"
-     bindsym 7 gaps inner current toggle 15  mode "default"
+     bindsym z gaps inner current toggle 0 mode "default"
+     bindsym 7 gaps inner current toggle 15 mode "default"
      #bindsym Z gaps inner 15 mode "default"
 
      bindsym Return mode "default"

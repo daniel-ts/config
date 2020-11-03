@@ -8,7 +8,7 @@ export PYENV_ROOT=$HOME/.local/share/pyenv
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-export PATH="$HOME/.local/share/poetry/bin:$PATH"
+export PATH="$HOME/.local/share/poetry/bin:$HOME/.local/bin:$PATH"
 
 
 ### java ###

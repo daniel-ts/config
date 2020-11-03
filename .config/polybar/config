@@ -60,8 +60,8 @@ font-5 = "Liberation Sans:style=Regular"
 modules-left = i3
 modules-center = date
 ;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
-;modules-right = lernplatz sys-info pulseaudio memory cpu wlan eth battery
-modules-right = sys-info pulseaudio memory cpu wlan eth battery
+modules-right = lernplatz sys-info pulseaudio memory cpu wlan eth battery
+;modules-right = sys-info pulseaudio memory cpu wlan eth battery
 
 tray-position = right
 tray-padding = 2
