@@ -128,3 +128,4 @@ PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
 # AStA pass
 export PASSWORD_STORE_DIR="$HOME/work/asta/git-repos/asta-pass"
 export TERM='xterm-256color'
+export GITLAB_TOKEN='vRiCRWiXRbu3kgd2TK49'

@@ -1,4 +1,4 @@
-cache-dir = "/home/dandy/.cache/pypoetry"
+cache-dir = "/home/dandy/.local/share"
 virtualenvs.create = true
-virtualenvs.in-project = true
+virtualenvs.in-project = false
 virtualenvs.path = "{cache-dir}/virtualenvs"
