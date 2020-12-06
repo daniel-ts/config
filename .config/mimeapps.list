@@ -17,11 +17,16 @@ application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
 image/png=feh.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
+video/mp4=vlc.desktop;
+text/csv=onlyoffice-desktopeditors.desktop;
+text/x-python=emacs.desktop;
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=onlyoffice-desktopeditors.desktop;
 
 [Removed Associations]
+text/*=emacs.desktop
 
 [Default Applications]
-inode/directory=dired.desktop
+inode/directory=nautilus.desktop
 application/pdf=emacs-pdf.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
@@ -34,3 +39,4 @@ application/x-extension-shtml=firefox.desktop
 application/xhtml+xml=firefox.desktop
 application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
+text/*=emacsclient.desktop

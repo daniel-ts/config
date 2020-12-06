@@ -26,11 +26,14 @@ export XDG_MUSIC_DIR="$HOME/music"
 export XDG_PICTURES_DIR="$HOME/pics"
 export XDG_VIDEOS_DIR="$HOME/vids"
 
-### environment
+### environment ###
 export PATH=$PATH:$HOME/bin:$PYENV_ROOT/bin:$JAVA_HOME
 export ALTERNATE_EDITOR=""
-export EDITOR="emacsclient -c -a emacs"
-export VISUAL="emacsclient -c -a emacs"
-export SSH_AUTH_SOCK="/run/user/1000/ssh-agent.socket"
+export EDITOR="emacsclient -c"
+export VISUAL="emacsclient -c"
+
+### gnome-keyring as ssh-agent ###
+# export SSH_AUTH_SOCK="/run/user/1000/ssh-agent.socket"  # OpenSSH agent
+# export SSH_AUTH_SOCK="/run/user/1000/keyring/ssh"  # set in .xinitrc
 
 ### other ###

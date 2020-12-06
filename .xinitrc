@@ -36,11 +36,17 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     unset f
 fi
 
+### gnome keyring daemon with ssh support
+### should be already started by PAM
+### keyring should already be unlocked by PAM
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
+
 #feh --bg-center /home/dandy/pics/Wallpapers/synthwave/neon/neon-sunset.jpg
 if [ "$XDG_VTNR" -eq 1 ]; then
     nitrogen --set-centered --restore
     conky -p 1 > /dev/null
-    exec i3
+    exec i3 -V 2>&1 > ~/.config/i3/log
 elif [ "$XDG_VTNR" -eq 2 ]; then
     exec emacsclient --create-frame
 fi

@@ -1,8 +1,5 @@
 
 set $mod Mod4
-set $ctrl Control_L
-set $alt  Alt_L
-
 font pango:monospace 8
 #font pango:DejaVu Sans Mono 8
 
@@ -18,12 +15,13 @@ workspace_layout stacking
 
 #exec --no-startup-id xcompmgr
 #exec_always --no-startup-id picom --blur-method dual_kawase --blur-strength 10 --experimental-backends
-exec --no-startup-id picom --blur-method dual_kawase --blur-strength 5 --experimental-backends
+exec --no-startup-id '/usr/bin/picom --blur-method dual_kawase --blur-strength 5 --experimental-backends'
 #exec --no-startup-id picom --experimental-backends
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id megasync
 exec --no-startup-id conky -qp 1
 exec --no-startup-id nm-applet
+exec --no-startup-id /usr/bin/keepassxc
 
 ##########################
 ####    Xresources    ####
@@ -101,7 +99,7 @@ bindsym $mod+Shift+d focus child
 
 bindsym $mod+Shift+n exec --no-startup-id termite -e "/usr/bin/emacsclient -t"
 bindsym $mod+Return exec --no-startup-id "/usr/bin/emacsclient -c -e '(multi-vterm-next)'"
-bindsym $mod+n exec --no-startup-id "/usr/bin/emacsclient -c"
+bindsym $mod+n exec --no-startup-id /usr/bin/emacsclient -c -n -e '(switch-to-buffer nil)'
 bindsym $mod+m exec --no-startup-id "firefox --new-window"
 bindsym $mod+Shift+m exec --no-startup-id "firefox --private-window www.duckduckgo.com"
 
@@ -134,6 +132,7 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+set $ws_os "11"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -146,6 +145,23 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
+bindsym $mod+Tab workspace $ws_os
+
+# assign workspaces to screens
+workspace $ws_os output VGA1
+
+workspace $ws1 output LVDS1
+workspace $ws2 output LVDS1
+workspace $ws3 output LVDS1
+workspace $ws4 output LVDS1
+workspace $ws5 output LVDS1
+workspace $ws6 output LVDS1
+workspace $ws7 output LVDS1
+workspace $ws8 output LVDS1
+workspace $ws9 output LVDS1
+workspace $ws10 output LVDS1
+
+
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
